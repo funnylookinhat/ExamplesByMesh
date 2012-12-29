@@ -78,7 +78,12 @@ function initPoints()
 
 function onMouseUp(e)
 {
-	var points = quad.retrieve({x:e.stageX, y:e.stageY});
+	var points = quad.retrieveInBounds({
+		x:( e.stageX - 50 ), 
+		y:( e.stageY - 50 ),
+		width: 100,
+		height: 100
+	});
 	
 	renderPoints(points);
 	stage.update();

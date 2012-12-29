@@ -153,6 +153,7 @@ QuadTree._filterResults = function(treeResult, bounds)
 QuadTree._isPointInsideBounds = function (point, bounds)
 {
 	return (
+		( point != undefined ) &&
 		(point.x >= bounds.x) &&
 		(point.x <= bounds.x + bounds.width) &&
 		(point.y >= bounds.y) &&
